@@ -1,0 +1,246 @@
+/*  for form  */
+.form {
+  display: block;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 25em;
+  margin: 5em auto 0.5em auto;
+}
+
+.inputform {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 25em;
+  margin: 2em auto 0.5em auto;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-text-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  color: #9e9d9d;
+  pointer-events: none;
+}
+
+.input-text {
+  width: 100%;
+  max-width: 30em;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+}
+
+.input-icon-right {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #9e9d9d;
+  border-radius: 0.2em;
+  padding: 0 0.2em;
+  font-size: 0.8em;
+  color: #555;
+}
+
+.input-icon-right svg {
+  height: 1em;
+  width: 1em;
+  margin-right: 0.2em;
+  color: #555;
+}
+
+.info-question {
+  position: absolute;
+  right: 4em;
+  background-color: white;
+  color: #9e9d9d;
+  border: 1px solid #555;
+  border-radius: 50%;
+  width: 1.1em;
+  height: 1.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+/* Sizes */
+.input-text.extra-small {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.25rem 0.25rem 2rem;
+}
+
+.input-text.medium {
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+}
+
+.input-text.large {
+  font-size: 1.25rem;
+  padding: 0.75rem 0.75rem 0.75rem 2rem;
+}
+
+.input-text.extra-large {
+  font-size: 1.5rem;
+  padding: 1rem 1rem 1rem 2rem;
+}
+/* Quiet Mode (no border) */
+.input-text.quiet {
+  border: none;
+  background-color: #f9f9f9;
+}
+
+.input-text.quiet:focus {
+  border: 1px solid #aaa;
+  outline: none;
+}
+
+/* Error State */
+.input-text.error {
+  border-color: #e74c3c !important;
+}
+
+.input-text.error:focus {
+  border-color: #c0392b !important;
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.5) !important;
+}
+
+/* Disabled State */
+.input-text[disabled] {
+  background-color: #ece5e5;
+  cursor: not-allowed;
+}
+
+/* for inputLabel */
+.input-label {
+  position: relative;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #333;
+}
+
+/* Required Indicator */
+.required {
+  color: #e74c3c;
+  margin-left: 0.25rem;
+}
+
+/* for inputGroup */
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: #e74c3c;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* for inputAnnotation */
+.input-annotation {
+  display: block;
+  margin-left: 0;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #777;
+}
+
+/* for infoIcon */
+.input-group-label-wrapper {
+  position: relative;
+}
+
+/* Positioning for info icon */
+.info-icon-wrapper {
+  display: flex;
+  align-items: center;
+  left: 3rem;
+  position: absolute;
+  bottom: 0.32em;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.info-icon {
+  background-color: white;
+  color: #555;
+  border: 1px solid #555;
+  border-radius: 50%;
+  width: 1.1em;
+  height: 1.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6em;
+  cursor: pointer;
+}
+
+.info-tooltip {
+  visibility: hidden;
+  background-color: #63749c;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  width: 10em;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.info-icon-wrapper:hover .info-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.storybook .info-icon-wrapper {
+  bottom: -0.2em;
+}
+
+.storybook .input-label.side {
+  display: flex;
+  justify-content: left;
+  top: 2.5em;
+}
+
+.storybook .input-label.top {
+  display: flex;
+  margin-left: 5rem;
+  vertical-align: middle;
+  top: 1em;
+}
+
+@media (max-width: 600px) {
+  .form {
+    padding: 0 1rem;
+  }
+
+  .input-text {
+    padding-left: 2rem;
+    padding-right: 1rem;
+  }
+}
