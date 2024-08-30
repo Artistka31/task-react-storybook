@@ -5,9 +5,12 @@
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@storybook/cli": "^8.2.9",
+    "@storybook/react": "^8.2.9",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
+    "gh-pages": "^6.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "^5.0.1",
@@ -20,7 +23,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "predeploy": "npm run build && npm run build-storybook",
+    "deploy": "gh-pages -d build && gh-pages -d storybook-static"
   },
   "eslintConfig": {
     "extends": [
@@ -57,12 +62,12 @@
     "@storybook/blocks": "^8.2.9",
     "@storybook/preset-create-react-app": "^8.2.9",
     "@storybook/preset-react-webpack": "^8.2.9",
-    "@storybook/react": "^8.2.9",
     "@storybook/react-webpack5": "^8.2.9",
     "@storybook/test": "^8.2.9",
     "eslint-plugin-storybook": "^0.8.0",
     "prop-types": "^15.8.1",
     "storybook": "^8.2.9",
     "webpack": "^5.94.0"
-  }
+  },
+  "homepage": "https://Artistka31.github.io/task-react-storybook"
 }
