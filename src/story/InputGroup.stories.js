@@ -31,7 +31,8 @@ export default {
       control: { type: "boolean" },
       description: "Marks the input field as required",
     },
-   position: {
+    position: {
+      defaultValue: "top", 
       control: { type: "radio" },
       options: ["top", "side"],
       description: "Position of the label relative to the input field",

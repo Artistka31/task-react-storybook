@@ -8,7 +8,7 @@ const InputLabel = ({
   position = "top",
   required = false,
   infoMessage,
-  isStorybook = false,
+  isStorybook = true,
 }) => {
   return (
     <label
