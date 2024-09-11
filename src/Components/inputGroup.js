@@ -18,6 +18,7 @@ const InputGroup = ({
   errorMessage = "Invalid email address",
   annotation = "Please enter your email address.",
   onChange,
+  autocomplete = "off",
 }) => {
   const [value, setValue] = useState(defaultValue);
   const [error, setError] = useState("");
@@ -42,6 +43,7 @@ const InputGroup = ({
       <div className={`input-group ${position}`}>
         <div className="input-group-label-wrapper">
           <InputLabel
+            id={inputProps.id}
             htmlFor={inputProps.id || inputProps.name || "input"}
             position={position}
             required={required}
@@ -51,12 +53,14 @@ const InputGroup = ({
           {infoMessage && <InfoIcon message={infoMessage} />}
         </div>
         <InputText
+          name={inputProps.name}
           value={value}
           onChange={handleChange}
           {...inputProps}
           size={size}
           quiet={quiet}
           disabled={disabled}
+          autocomplete={autocomplete}
           className={error ? "error" : ""}
         />
         {annotation && <div className="input-annotation">{annotation}</div>}
